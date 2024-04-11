@@ -19,10 +19,14 @@ Mallet includes a few default obfuscation chains but custom chains can be specif
 
 Finally, file format and execution options can be specified:
 
+## Disclaimer
+This tool is only to be used for authorized testing or educational purposes. I do not condone the use of this tool in any criminal or malicious activities.
+
 ## To-Do
 - AES/RC4/XOR methods
 - Execution methods
 - Key obfuscation
+- Self-signing
 - DLL format support
 - IAT manipulation
 - Msfvenom templates
