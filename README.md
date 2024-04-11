@@ -9,7 +9,7 @@ Raw shellcode is read in from a specified file:
 If none is provided, you may use a C2 template:
 
 ### Quick Mode
-Quick mode can be used to generate a PE payload with default options - triple AES encryption with local thread execution:
+Quick mode can be used to generate a PE payload with default options - a .rsrc payload wth triple AES encryption and local thread execution:
 
 ### Custom Mode
 Custom mode allows much more control over payload generation parameters.
