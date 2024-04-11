@@ -1,7 +1,5 @@
 # Mallet
-Mallet is a payload generation tool to convert shellcode into PE droppers. It features evasion options with multiple encryption and obfuscation methods for payloads. Mallet also includes templates for common C2 framework payloads like Metasploit and Havoc.
-
-Payload execution methods include simple thread execution, remote process injection, and remote thread hijacking.
+Mallet is a tool to convert raw shellcode payloads into PE droppers. It features evasion options with multiple encryption and obfuscation methods and templates for common C2 frameworks.
 
 ## Usage
 Raw shellcode is read in from a specified file:
