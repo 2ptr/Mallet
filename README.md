@@ -1,5 +1,5 @@
 # Mallet
-Mallet is a tool to convert raw shellcode payloads into PE droppers. It features evasion options with multiple encryption and obfuscation methods and templates for common C2 frameworks.
+Mallet is a tool to convert raw shellcode payloads into PE droppers. It features simple static evasion options with multiple encryption and obfuscation methods and templates for common C2 frameworks. Mallet is not meant to be a deep evasion tool, just a quick converter to bypass basic AV solutions like Windows Defender.
 
 ## Usage
 Raw shellcode is read in from a specified file:
