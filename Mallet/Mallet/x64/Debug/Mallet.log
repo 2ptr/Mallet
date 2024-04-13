@@ -1,0 +1,26 @@
+﻿  encryption.c
+C:\Users\jake1\Desktop\Maldev\Mallet\encryption.c(14,23): warning C4047: '=': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\jake1\Desktop\Maldev\Mallet\encryption.c(20,3): warning C4013: 'PaddingAES' undefined; assuming extern returning int
+C:\Users\jake1\Desktop\Maldev\Mallet\encryption.c(21,10): warning C4477: 'printf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'SIZE_T'
+  C:\Users\jake1\Desktop\Maldev\Mallet\encryption.c(21,10):
+  consider using '%lld' in the format string
+  C:\Users\jake1\Desktop\Maldev\Mallet\encryption.c(21,10):
+  consider using '%Id' in the format string
+  C:\Users\jake1\Desktop\Maldev\Mallet\encryption.c(21,10):
+  consider using '%I64d' in the format string
+  
+C:\Users\jake1\Desktop\Maldev\Mallet\encryption.c(34,2): warning C4013: 'RandomBytes' undefined; assuming extern returning int
+C:\Users\jake1\Desktop\Maldev\Mallet\encryption.c(49,57): warning C4244: 'function': conversion from 'SIZE_T' to 'uint32_t', possible loss of data
+C:\Users\jake1\Desktop\Maldev\Mallet\encryption.c(51,57): warning C4244: 'function': conversion from 'SIZE_T' to 'uint32_t', possible loss of data
+C:\Users\jake1\Desktop\Maldev\Mallet\encryption.c(53,57): warning C4244: 'function': conversion from 'SIZE_T' to 'uint32_t', possible loss of data
+C:\Users\jake1\Desktop\Maldev\Mallet\encryption.c(91,21): warning C4098: 'QuickModeEncrypt': 'void' function returning a value
+  main.c
+C:\Users\jake1\Desktop\Maldev\Mallet\main.c(41,27): warning C4047: 'function': 'int *' differs in levels of indirection from 'int **'
+C:\Users\jake1\Desktop\Maldev\Mallet\main.c(41,27): warning C4024: 'splashScreen': different types for formal and actual parameter 3
+C:\Users\jake1\Desktop\Maldev\Mallet\main.c(61,11): warning C4047: '==': 'int *' differs in levels of indirection from 'int'
+C:\Users\jake1\Desktop\Maldev\Mallet\main.c(66,22): warning C4047: '=': 'SIZE_T' differs in levels of indirection from 'void *'
+C:\Users\jake1\Desktop\Maldev\Mallet\main.c(67,16): warning C4013: 'ReadShellcode' undefined; assuming extern returning int
+C:\Users\jake1\Desktop\Maldev\Mallet\main.c(74,4): warning C4013: 'QuickModeEncrypt' undefined; assuming extern returning int
+C:\Users\jake1\Desktop\Maldev\Mallet\main.c(40,7): warning C4047: 'initializing': 'int *' differs in levels of indirection from 'int'
+  Generating Code...
+  Mallet.vcxproj -> C:\Users\jake1\Desktop\Maldev\Mallet\x64\Debug\Mallet.exe
