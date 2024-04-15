@@ -26,7 +26,7 @@ Finally, you may choose to obfuscate the runner template's strings. This will re
 
 
 ## Disclaimer
-Mallet is just a way for me to make quick-and-dirty droppers and learn more about malware dev. This tool isn't going to save you from an EDR or any competent AV solution.
+Mallet is just a way for me to make quick-and-dirty droppers and learn more about C and the Win32 API. This tool isn't going to save you from an EDR or any competent AV solution.
 
 This tool is only to be used for authorized testing or educational purposes. I do not condone the use of this tool in any criminal or malicious activities.
 
