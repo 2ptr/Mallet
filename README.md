@@ -20,7 +20,7 @@ Custom payload location:
 
 As well as custom execution methods, including `.dll`:
 
-Finally, you may choose if you would like to obfuscate the runner template's strings. This will replace variable names with random strings:
+Finally, you may choose to obfuscate the runner template's strings. This will replace variable names with random strings:
 
 ## Opsec
 Mallet is just to be used for some quick-and-dirty droppers. This tool isn't going to save you from an EDR or any competent AV solution. 
