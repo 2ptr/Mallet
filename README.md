@@ -1,5 +1,5 @@
 # Mallet
-Mallet is a tool to quickly generate shellcode droppers that will evade basic AV solutions like Windows Defender. 
+Mallet is a tool to quickly generate shellcode droppers that will evade basic AV solutions like Windows Defender, using either custom shellcode or templates for popular C2 frameworks.
 
 ## Usage
 The tool itself consists of two basic parts - the generator and runner files. 
