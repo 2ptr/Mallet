@@ -1,31 +1,34 @@
 # Mallet
-Mallet is a tool to convert raw shellcode payloads into PE droppers. It features simple static evasion options with multiple encryption and obfuscation methods and templates for common C2 frameworks. Mallet is not meant to be a deep evasion tool, just a quick converter to bypass basic AV solutions like Windows Defender.
+Mallet is a tool to quickly generate shellcode droppers that will evade basic AV solutions like Windows Defender. 
 
 ## Usage
-Raw shellcode is read in from a specified file:
+The tool itself consists of two basic parts - the generator and runner files. 
 
-If none is provided, you may use a C2 template:
+The generator will take a raw shellcode file and encrypt or obfuscate it using either a preset chain or a custom chain. Afterwards, the keychain used will be written to a saved document and a decryption protocol will be inserted into the runner template.
+
+The encrypted shellcode will then be included in whichever location of the runner the user wishes - `.text`, `.data`, `.rsrc`. The execution method may also be specified by the user.
+
+Afterwards, you just need to open the `runner.sln` Visual Studio project and compile it to binary.
 
 ### Quick Mode
-Quick mode can be used to generate a PE payload with default options - a .rsrc payload wth triple AES encryption and local thread execution:
+Quick mode can be used to generate a runner payload with default options - a `.text` payload with AES encryption and local thread execution:
 
 ### Custom Mode
-Custom mode allows much more control over payload generation parameters.
-Payloads can be placed in whichever section desired (.data, .rsrc, .rdata): 
+Custom mode allows much more control over payload generation parameters. The user may specify a custom encryption chain:
 
-Mallet includes a few default obfuscation chains but custom chains can be specified as well:
+Custom payload location:
 
-Finally, file format and execution options can be specified:
+As well as custom execution methods, including `.dll`:
+
+## Opsec
+Mallet is just to be used for some quick-and-dirty droppers. This tool isn't going to save you from an EDR or any competent AV solution. 
 
 ## Disclaimer
 This tool is only to be used for authorized testing or educational purposes. I do not condone the use of this tool in any criminal or malicious activities.
 
 ## To-Do
-- AES/RC4/XOR methods
 - Execution methods
 - Key obfuscation
-- Self-signing
 - DLL format support
-- IAT manipulation
 - Msfvenom templates
 - Havoc C2 templates
