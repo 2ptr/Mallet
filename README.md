@@ -4,7 +4,7 @@ Mallet is a tool to quickly generate shellcode droppers that will evade basic AV
 ## Usage
 The tool itself consists of two basic parts - the generator and runner files. 
 
-The generator will take a raw shellcode file and encrypt it using either a preset chain or a custom chain specified by the user. The keychain used will be written to a saved document and a decryption protocol will be inserted into the runner template.
+The generator will take a raw shellcode file and encrypt it using either a preset chain or a custom chain specified by the user. The keychain used will be written to a log file and a decryption protocol will be inserted into the runner template.
 
 The encrypted shellcode will then be included in whichever location of the runner the user wishes - `.text`, `.data`, `.rsrc`. The execution method may also be specified by the user.
 
