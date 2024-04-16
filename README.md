@@ -16,7 +16,7 @@ Quick mode can be used to generate a runner payload with default options - a `.t
 
 ![Quick mode](./quickmode.png)
 
-This will likely be enough for the majority of use cases.
+Fortunately, Windows Defender is worthless and this will likely be enough for the majority of use cases.
 
 ### Custom Mode
 Custom mode allows much more control over payload generation parameters. The user may specify a custom encryption chain (limit 10):
