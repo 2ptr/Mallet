@@ -7,9 +7,7 @@ The tool itself consists of two basic parts - the generator (Mallet) and runner 
 
 The generator will take a raw shellcode file and encrypt it using either a preset chain or a custom chain specified by the user. The keychain used will be written to a log file and a decryption protocol will be inserted into the runner template.
 
-The encrypted shellcode will then be included in whichever location of the runner the user wishes - `.text`, `.data`, `.rsrc`. The execution method may also be specified by the user.
-
-Afterwards, you just need to open the `MalletRun.sln` Visual Studio project and compile it to binary for execution.
+Place the generator (`Mallet.exe`) in the `MalletRun` directory and use it to generate the runner code. Afterwards, open the `MalletRun.sln` Visual Studio project and compile it to binary for execution.
 
 ### Quick Mode
 Quick mode can be used to generate a runner payload with default options - a `.text` payload with AES encryption and local thread execution:
