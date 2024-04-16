@@ -1,0 +1,4 @@
+﻿  runner.c
+C:\Users\jake1\Desktop\Maldev\Mallet_Master\MalletRun\runner.c(10,40): warning C4244: 'function': conversion from 'SIZE_T' to 'uint32_t', possible loss of data
+  LINK : C:\Users\jake1\Desktop\Maldev\Mallet_Master\MalletRun\x64\Debug\MalletRun.exe not found or not built by the last incremental link; performing full link
+  MalletRun.vcxproj -> C:\Users\jake1\Desktop\Maldev\Mallet_Master\MalletRun\x64\Debug\MalletRun.exe
