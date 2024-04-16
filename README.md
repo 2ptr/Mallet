@@ -3,16 +3,18 @@
 Mallet is a tool to quickly generate shellcode droppers that will evade basic AV solutions like Windows Defender. Mallet supports custom shellcode as well as templates for popular C2 frameworks like Metasploit and Havoc.
 
 ## Usage
-The tool itself consists of two basic parts - the generator and runner files. 
+The tool itself consists of two basic parts - the generator (Mallet) and runner (MalletRun). 
 
 The generator will take a raw shellcode file and encrypt it using either a preset chain or a custom chain specified by the user. The keychain used will be written to a log file and a decryption protocol will be inserted into the runner template.
 
 The encrypted shellcode will then be included in whichever location of the runner the user wishes - `.text`, `.data`, `.rsrc`. The execution method may also be specified by the user.
 
-Afterwards, you just need to open the `runner.sln` Visual Studio project and compile it to binary.
+Afterwards, you just need to open the `runner.sln` Visual Studio project and compile it to binary for execution.
 
 ### Quick Mode
 Quick mode can be used to generate a runner payload with default options - a `.text` payload with AES encryption and local thread execution:
+
+![Quick mode](./quickmode.png)
 
 This will likely be enough for the majority of use cases.
 
