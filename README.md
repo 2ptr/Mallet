@@ -9,7 +9,7 @@ The generator will take a raw shellcode file and encrypt it using either a prese
 
 The encrypted shellcode will then be included in whichever location of the runner the user wishes - `.text`, `.data`, `.rsrc`. The execution method may also be specified by the user.
 
-Afterwards, you just need to open the `runner.sln` Visual Studio project and compile it to binary for execution.
+Afterwards, you just need to open the `MalletRun.sln` Visual Studio project and compile it to binary for execution.
 
 ### Quick Mode
 Quick mode can be used to generate a runner payload with default options - a `.text` payload with AES encryption and local thread execution:
