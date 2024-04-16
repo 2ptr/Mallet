@@ -3,8 +3,7 @@
 #include "aes.h"
 #include "util.h"
 
-// Quick Mode - Triple AES
-
+// Quick Mode - AES with Local Thread Execution.
 void QuickMode(OUT PVOID pPayload, IN SIZE_T sPayloadSize)
 {
 	// Init Tiny-AES struct
@@ -65,7 +64,7 @@ void QuickMode(OUT PVOID pPayload, IN SIZE_T sPayloadSize)
 	fclose(fKeychain);
 	printf("Keychain written to keychain.txt.\n");
 
-	// Write to runner
+	// Write to runner with quickmode settings (.text, one round AES)
 	WriteRunner(pPadded.pPayload, pPadded.sPayloadSize, 1, "keychain.txt", 1);
 
 	return EXIT_SUCCESS;

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <Windows.h>
 
+// Does what it says. Reads shellcode from a specified file.
 BOOL ReadShellcode(IN char* sFileName, OUT PVOID *pPayload, OUT SIZE_T *sPayloadSize)
 {
 	// Get file size
@@ -23,7 +24,8 @@ BOOL ReadShellcode(IN char* sFileName, OUT PVOID *pPayload, OUT SIZE_T *sPayload
 
 	return EXIT_SUCCESS;
 }
-// nCycles = num of encryptions, sKeychain = keychain file, nPlacement = payload placement
+
+// Writes the runner. Takes in payload, encryption chain, keychain filename, and options flags.
 BOOL WriteRunner(IN PVOID pPayload, IN SIZE_T sPayloadSize, IN int nCycles, IN char* sKeychain, IN int nPlacement)
 {
 	// Runner file pointer
@@ -54,6 +56,7 @@ BOOL WriteRunner(IN PVOID pPayload, IN SIZE_T sPayloadSize, IN int nCycles, IN c
 	return EXIT_SUCCESS;
 }
 
+// Write header and payload for runner
 BOOL WriteHeader(PBYTE pPayload, SIZE_T sPayloadSize, FILE* fRunner, int nPlacement)
 {
 	switch (nPlacement)
@@ -105,6 +108,7 @@ BOOL WriteHeader(PBYTE pPayload, SIZE_T sPayloadSize, FILE* fRunner, int nPlacem
 	return EXIT_SUCCESS;
 }
 
+// Write execution process for runner
 BOOL WriteExecution(FILE* fRunner, int nExecution)
 {
 	switch (nExecution)

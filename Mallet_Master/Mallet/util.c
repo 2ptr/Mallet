@@ -1,6 +1,7 @@
 #include <Windows.h>
 #include <stdio.h>
 
+// Useful struct for managing payloads.
 struct PayloadInfo {
 	PVOID pPayload;
 	SIZE_T sPayloadSize;

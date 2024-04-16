@@ -77,13 +77,41 @@ int main(int argc, char* argv[])
 			break;
 		case 2: // CUSTOM MODE
 			printf("\n**********************************************************\n");
-			char line[1024];
+			char sCipher[1024];
+			// GET ENCRYPTION CHAIN
 			printf("Specify custom encryption chain: \n");
 			printf("1. AES-256\n");
 			printf("2. RC4\n");
 			printf("3. XOR\n");
-			scanf_s("%10s", line);
-			printf("%s", line);
+			scanf_s("%10s", sCipher);
+			printf("%s\n", sCipher);
+
+			// GET PAYLOAD PLACEMENT
+			int nPayload = 0;
+			printf("Specify payload location:\n");
+			printf("1. .text\n");
+			printf("2. .data\n");
+			printf("3. .rsrc\n"); // HANDLE THIS WITH WARNING
+			scanf_s("%ld", &nPayload);
+
+			// GET EXECUTION METHOD
+			int nExecution = 0;
+			printf("Specify execution method:\n");
+			printf("1. Local thread execution\n");
+			// HANDLE THESE LOL
+			printf("2. Remote process injection\n");
+			printf("3. Remote DLL injection\n");
+			printf("4. Remote thread hijack\n");
+			scanf_s("%ld", &nExecution);
+
+			// OBFUSCATE?
+			int nObfuscate = 0;
+			printf("Would you like to obfuscate strings?\n");
+			printf("1. Yes\n");
+			printf("2. No\n");
+			scanf_s("%ld", &nObfuscate);
+
+			// CustomMode(pInfo.pPayload, pInfo.sPayloadSize, sCipher, nPayload, nExecution);
 
 			break;
 		}
