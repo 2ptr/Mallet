@@ -29,7 +29,7 @@ Finally, you may choose to obfuscate the runner template's strings. This will re
 
 Using quick mode alone yields a somewhat concerning result of only 18 detections out of the 70 top AV solutions according to VirusTotal:
 
-![Quickmode](./quickmode.png)
+![Quickmode](./virustotal.png)
 
 ## Disclaimer
 Mallet is just a way for me to make quick-and-dirty droppers and learn more about C and the Win32 API. This tool isn't going to save you from an EDR or any competent AV solution, and is currently held together by Elmer's glue and small strips of construction paper.
