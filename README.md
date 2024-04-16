@@ -36,5 +36,7 @@ This tool is only to be used for authorized testing or educational purposes. I d
 - DLL format support
 - Msfvenom templates
 - Havoc C2 templates
+- Error handling
+- Cleanup menu and control flow
 
 Eventually, I would like to expand Mallet to include auto-compilation as well, but this is a rather large item. We will see...
