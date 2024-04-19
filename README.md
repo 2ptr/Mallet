@@ -37,7 +37,7 @@ Mallet is just a way for me to make quick-and-dirty droppers and learn more abou
 This tool is only to be used for authorized testing or educational purposes. I do not condone the use of this tool in any criminal or malicious activities.
 
 ## To-Do
-- Execution methods (NT API Updates)
+- Execution methods will be getting an overhaul eventually (NT API and indirect calls).
 - DLL format support
 - Msfvenom templates
 - Havoc C2 templates
