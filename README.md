@@ -19,11 +19,19 @@ Fortunately, Windows Defender is worthless and this will likely be enough for th
 ### Custom Mode
 Custom mode allows much more control over payload generation parameters. The user may specify a custom encryption chain (limit 10):
 
+![chain](./chain.png)
+
 Custom payload location:
+
+![location](./location.png)
 
 As well as custom execution methods, including `.dll`:
 
+![execute](./execute.png)
+
 Finally, you may choose to obfuscate the runner template's strings. This will replace variable names with random strings:
+
+![obfuscate](./obfuscate.png)
 
 ## Results
 
