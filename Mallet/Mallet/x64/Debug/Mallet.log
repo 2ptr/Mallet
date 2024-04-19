@@ -1,0 +1,26 @@
+﻿  io.c
+C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(19,17): warning C4244: 'function': conversion from 'SIZE_T' to 'int', possible loss of data
+C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(72,2): warning C4013: 'WriteHeader' undefined; assuming extern returning int
+C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(77,15): warning C4244: 'function': conversion from 'SIZE_T' to 'int', possible loss of data
+C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(82,16): warning C4244: 'function': conversion from 'SIZE_T' to 'int', possible loss of data
+C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(84,16): warning C4244: 'function': conversion from 'SIZE_T' to 'int', possible loss of data
+C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(95,2): warning C4013: 'WriteExecution' undefined; assuming extern returning int
+C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(126,21): warning C4477: 'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'SIZE_T'
+  C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(126,21):
+  consider using '%lld' in the format string
+  C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(126,21):
+  consider using '%Id' in the format string
+  C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(126,21):
+  consider using '%I64d' in the format string
+  
+C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(145,21): warning C4477: 'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'SIZE_T'
+  C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(145,21):
+  consider using '%lld' in the format string
+  C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(145,21):
+  consider using '%Id' in the format string
+  C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(145,21):
+  consider using '%I64d' in the format string
+  
+C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(172,1): warning C4716: 'WriteExecution': must return a value
+C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\io.c(60,1): warning C4716: 'LogAES': must return a value
+  Mallet.vcxproj -> C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\x64\Debug\Mallet.exe
