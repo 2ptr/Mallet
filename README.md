@@ -1,4 +1,5 @@
 <img src="mallet.png" width="200" height="200" />
+
 # Mallet
 Mallet is a tool to quickly generate shellcode droppers that will evade basic AV solutions like Windows Defender. Mallet supports custom shellcode as well as templates for popular C2 frameworks like Metasploit and Havoc.
 
@@ -6,6 +7,8 @@ MALLET IS A WIP. MANY FEATURES ARE NOT YET IMPLEMENTED.
 
 ## Usage
 Clone the repo and start `Mallet.bat`. Use the menu to select your settings and generate a payload. The output dropper and keychain will be stored in the Output folder.
+
+![Menu](./menu.png)
 
 ### Quick Mode
 Quick mode can be used to generate a runner payload with default options - a `.text` payload with a single round of AES encryption and local thread execution. Windows Defender is pretty bad so this is likely all you will need.
