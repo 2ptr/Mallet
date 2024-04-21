@@ -1,7 +1,7 @@
 <img src="mallet.png" width="300" height="300" />
 
 # Mallet
-Mallet is a tool to quickly generate shellcode droppers that will evade basic AV solutions like Windows Defender. Mallet supports custom shellcode as well as templates for popular C2 frameworks.
+Mallet is a tool to quickly generate shellcode droppers that will evade basic AV solutions like Windows Defender.
 
 MALLET IS A WIP. MANY FEATURES ARE NOT YET IMPLEMENTED.
 
