@@ -5,41 +5,18 @@ Mallet is a tool to quickly generate shellcode droppers that will evade basic AV
 MALLET IS A WIP. MANY FEATURES ARE NOT YET IMPLEMENTED.
 
 ## Usage
-The tool itself consists of two basic parts - the generator (Mallet) and runner (MalletRun). 
-
-The generator will take a raw shellcode file and encrypt it using either a preset chain or a custom chain specified by the user. The keychain used will be written to a log file and a decryption protocol will be inserted into the runner template.
-
-Place the generator (`Mallet.exe`) in the `MalletRun` directory and use it to generate the runner code. Afterwards, open the `MalletRun.sln` Visual Studio project and compile it to binary for execution.
+Clone the repo and start `Mallet.bat`. Use the menu to select your settings and generate a payload. The output dropper and keychain will be stored in the Output folder.
 
 ### Quick Mode
-Quick mode can be used to generate a runner payload with default options - a `.text` payload with AES encryption and local thread execution:
-
-![Quick mode](./quickmode.png)
-
-Fortunately, Windows Defender is worthless and this will likely be enough for the majority of use cases.
-
-### Custom Mode
-Custom mode allows much more control over payload generation parameters. The user may specify a custom encryption chain (limit 10):
-
-![chain](./chain.png)
-
-Custom payload location:
-
-![location](./location.png)
-
-As well as custom execution methods, including `.dll`:
-
-![execute](./execute.png)
-
-Finally, you may choose to obfuscate the runner template's strings. This will replace variable names with random strings:
-
-![obfuscate](./obfuscate.png)
+Quick mode can be used to generate a runner payload with default options - a `.text` payload with a single round of AES encryption and local thread execution. Windows Defender is pretty bad so this is likely all you will need.
 
 ## Results
 
 Using quick mode alone yields a somewhat concerning result of only 18 detections out of the 70 top AV solutions according to VirusTotal:
 
 ![Quickmode](./virustotal.png)
+
+
 
 ## Disclaimer
 Mallet is just a way for me to make quick-and-dirty droppers and learn more about C and the Win32 API. This tool isn't going to save you from an EDR or any competent AV solution, and is currently held together by Elmer's glue and small strips of construction paper.
