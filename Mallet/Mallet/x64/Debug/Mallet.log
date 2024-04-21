@@ -1,6 +1,0 @@
-﻿  util.c
-C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\util.c(22,8): warning C4013: 'time' undefined; assuming extern returning int
-C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\util.c(45,8): warning C4477: 'scanf' : format string '%i' requires an argument of type 'int *', but variadic argument 1 has type 'int'
-C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\util.c(58,8): warning C4477: 'scanf' : format string '%i' requires an argument of type 'int *', but variadic argument 1 has type 'int'
-C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\util.c(71,8): warning C4477: 'scanf' : format string '%i' requires an argument of type 'int *', but variadic argument 1 has type 'int'
-  Mallet.vcxproj -> C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet\x64\Debug\Mallet.exe
