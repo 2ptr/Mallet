@@ -8,7 +8,7 @@ MALLET IS A WIP. MANY FEATURES ARE NOT YET IMPLEMENTED.
 ## Usage
 Clone the repo and start `Mallet.bat`. Use the menu to select your settings and generate a payload. The output dropper and keychain will be stored in the Output folder.
 
-![Menu](./menu.png)
+![Menu](./mainmenu.png)
 
 ### Quick Mode
 Quick mode can be used to generate a runner payload with default options - a `.text` payload with a single round of AES encryption and local thread execution. Windows Defender is pretty bad so this is likely all you will need.
