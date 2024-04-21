@@ -32,6 +32,7 @@ This tool is only to be used for authorized testing or educational purposes. I d
 ## To-Do
 - Execution methods will be getting an overhaul eventually (NT API and indirect calls).
 - DLL format support
+- RC4 and XOR
 - Msfvenom templates
 - Havoc C2 templates
 - Error handling
