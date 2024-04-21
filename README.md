@@ -20,6 +20,9 @@ Using quick mode alone yields a somewhat concerning result of only 18 detections
 ![Quickmode](./virustotal.png)
 
 
+## Troubleshooting
+
+Mallet requires VS version 2022 - specifically the Developer Powershell script for auto-compilation. Mallet also uses Qt for the GUI which may have dependency issues in some cases. Consider installing Qt on your machine if you run into any trouble.
 
 ## Disclaimer
 Mallet is just a way for me to make quick-and-dirty droppers and learn more about C and the Win32 API. This tool isn't going to save you from an EDR or any competent AV solution, and is currently held together by Elmer's glue and small strips of construction paper.
@@ -32,6 +35,4 @@ This tool is only to be used for authorized testing or educational purposes. I d
 - Msfvenom templates
 - Havoc C2 templates
 - Error handling
-- Cleanup menu and control flow
 
-Eventually, I would like to expand Mallet to include auto-compilation as well, but this is a rather large item. We will see...
