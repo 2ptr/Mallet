@@ -1,18 +1,18 @@
 ﻿  io.cpp
-C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\io.cpp(138,20): warning C4477: 'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'SIZE_T'
-  C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\io.cpp(138,20):
+C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\io.cpp(121,20): warning C4477: 'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'SIZE_T'
+  C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\io.cpp(121,20):
   consider using '%lld' in the format string
-  C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\io.cpp(138,20):
+  C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\io.cpp(121,20):
   consider using '%Id' in the format string
-  C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\io.cpp(138,20):
+  C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\io.cpp(121,20):
   consider using '%I64d' in the format string
   
-C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\io.cpp(157,20): warning C4477: 'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'SIZE_T'
-  C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\io.cpp(157,20):
+C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\io.cpp(141,20): warning C4477: 'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'SIZE_T'
+  C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\io.cpp(141,20):
   consider using '%lld' in the format string
-  C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\io.cpp(157,20):
+  C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\io.cpp(141,20):
   consider using '%Id' in the format string
-  C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\io.cpp(157,20):
+  C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\io.cpp(141,20):
   consider using '%I64d' in the format string
   
-  Mallet_GUI.vcxproj -> C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\x64\Release\Mallet_GUI.exe
+  Mallet_GUI.vcxproj -> C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\x64\Release\Mallet_GUI.exe

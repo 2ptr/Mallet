@@ -2,6 +2,10 @@
 
 #include <Windows.h>
 #include <iostream>
+#include <stdio.h>
+#include <string.h>
+#include <string>
+#include <fstream>
 using namespace std;
 #ifndef COMMON_H
 #define COMMON_H
@@ -18,8 +22,7 @@ typedef struct UserOptions {
 	string sProcess;
 }UserOptions;
 void RandomBytes(PBYTE pByte, SIZE_T sSize);
-BOOL RevshellPayload(OUT PVOID* pPayload, OUT SIZE_T* sPayloadSize, IN struct UserOptions sMenuOptions);
-BOOL MeterpreterPayload(OUT PVOID* pPayload, OUT SIZE_T* sPayloadSize, IN struct UserOptions sMenuOptions);
+void Copyfile(IN string sFromFile, OUT FILE* fDump);
 
 // Main
 void Mallet(struct UserOptions sMenuOptions);
@@ -31,6 +34,7 @@ BOOL WriteRunner(IN PVOID pPayload, IN SIZE_T sPayloadSize, IN struct UserOption
 BOOL WriteHeader(IN PBYTE pPayload, IN SIZE_T sPayloadSize, IN FILE* fRunner, IN struct UserOptions sMenuOptions);
 BOOL WriteRsrc(IN PVOID pPayload, IN SIZE_T sPayloadSize);
 BOOL WriteExecution(IN FILE* fRunner, IN struct UserOptions sMenuOptions);
+BOOL WriteDecryption(IN FILE* fRunner, IN FILE* fKeychain, IN struct UserOptions sMenuOptions);
 
 // Generator
 int Generate(IN PVOID pPayload, IN SIZE_T sPayloadSize, IN struct UserOptions sMenuOptions);

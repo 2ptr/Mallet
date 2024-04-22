@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-#include <string>
 #include "Common.h"
 using namespace std;
 
@@ -20,4 +17,15 @@ void DumpHexBuffer(PBYTE Data, SIZE_T Size) {
 		printf("\\x%0.2X", Data[i]);
 	}
 	printf("\n");
+}
+
+void Copyfile(IN string sFromFile, OUT FILE* fDump)
+{
+	ifstream file(sFromFile);
+	string line;
+	while (getline(file, line))
+	{
+		fprintf(fDump, line.c_str());
+		fprintf(fDump, "\n");
+	}
 }

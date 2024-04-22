@@ -1,4 +1,10 @@
-﻿  aes.c
-  runner.c
-  Generating Code...
-  MalletRun.vcxproj -> C:\Users\jake1\Desktop\Maldev\Mallet_Master\MalletRun\x64\Debug\MalletRun.exe
+﻿  runner.c
+C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\runner.c(52,41): warning C4244: 'function': conversion from 'SIZE_T' to 'uint32_t', possible loss of data
+C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\runner.c(53,41): warning C4244: 'function': conversion from 'SIZE_T' to 'uint32_t', possible loss of data
+C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\runner.c(54,41): warning C4244: 'function': conversion from 'SIZE_T' to 'uint32_t', possible loss of data
+C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\runner.c(55,41): warning C4244: 'function': conversion from 'SIZE_T' to 'uint32_t', possible loss of data
+C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\runner.c(56,41): warning C4244: 'function': conversion from 'SIZE_T' to 'uint32_t', possible loss of data
+C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\runner.c(57,41): warning C4244: 'function': conversion from 'SIZE_T' to 'uint32_t', possible loss of data
+C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\runner.c(58,41): warning C4244: 'function': conversion from 'SIZE_T' to 'uint32_t', possible loss of data
+C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\runner.c(6,17): warning C4101: 'ctx': unreferenced local variable
+  MalletRun.vcxproj -> C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\x64\Debug\MalletRun.exe
