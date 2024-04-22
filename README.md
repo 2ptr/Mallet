@@ -35,6 +35,5 @@ This tool is only to be used for authorized testing or educational purposes. I d
 - DLL format support
 - RC4 and XOR
 - Msfvenom templates
-- Havoc C2 templates
 - Error handling
 
