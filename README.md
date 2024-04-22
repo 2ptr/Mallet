@@ -22,8 +22,6 @@ Using quick mode alone yields a somewhat concerning result of only 18 detections
 
 ## Troubleshooting
 
-You will need to choose a delivery method that isn't `.rsrc` for your first compilation. After that you should be fine.
-
 Mallet requires VS version 2022 - specifically the Developer Powershell script for auto-compilation. Mallet also uses Qt for the GUI which may have dependency issues in some cases. Consider installing Qt on your machine if you run into any trouble.
 
 ## Disclaimer
