@@ -98,6 +98,7 @@
     <ClCompile Include="compile.cpp" />
     <ClCompile Include="encryption.cpp" />
     <ClCompile Include="generator.cpp" />
+    <ClCompile Include="headers.cpp" />
     <ClCompile Include="util.cpp" />
     <QtRcc Include="Mallet_GUI.qrc" />
     <QtUic Include="Mallet_GUI.ui" />

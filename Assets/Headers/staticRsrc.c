@@ -1,10 +1,9 @@
-#include <Windows.h>
-#include "aes.h"
+#include "resource.h"
 
 typedef struct RsrcInfo {
 	PVOID pWorkBuffer;
 	SIZE_T sBufferSize;
-};
+}RsrcInfo;
 
 RsrcInfo CloneRsrcPayload()
 {
@@ -22,4 +21,4 @@ int main()
 {
 	RsrcInfo sBufferInfo = CloneRsrcPayload();
 	SIZE_T sPayloadSize = sBufferInfo.sBufferSize;
-	PVOID pPayload = sBufferInfo.pWorkBuffer;
+	PBYTE pPayload = sBufferInfo.pWorkBuffer;

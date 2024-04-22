@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{C3082FED-CC01-4D3D-9E81-06345F431CEF}|Mallet_GUI.vcxproj|solutionrelative:io.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3082FED-CC01-4D3D-9E81-06345F431CEF}|Mallet_GUI.vcxproj|C:\\Users\\jake1\\Desktop\\Maldev\\Mallet\\Mallet_GUI\\Common.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C3082FED-CC01-4D3D-9E81-06345F431CEF}|Mallet_GUI.vcxproj|solutionrelative:Common.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C3082FED-CC01-4D3D-9E81-06345F431CEF}|Mallet_GUI.vcxproj|C:\\Users\\jake1\\Desktop\\Maldev\\Mallet\\Mallet_GUI\\encryption.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C3082FED-CC01-4D3D-9E81-06345F431CEF}|Mallet_GUI.vcxproj|solutionrelative:encryption.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3082FED-CC01-4D3D-9E81-06345F431CEF}|Mallet_GUI.vcxproj|C:\\Users\\jake1\\Desktop\\Maldev\\Mallet\\Mallet_GUI\\util.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C3082FED-CC01-4D3D-9E81-06345F431CEF}|Mallet_GUI.vcxproj|solutionrelative:util.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C3082FED-CC01-4D3D-9E81-06345F431CEF}|Mallet_GUI.vcxproj|C:\\Users\\jake1\\Desktop\\Maldev\\Mallet\\Mallet_GUI\\generator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C3082FED-CC01-4D3D-9E81-06345F431CEF}|Mallet_GUI.vcxproj|solutionrelative:generator.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3082FED-CC01-4D3D-9E81-06345F431CEF}|Mallet_GUI.vcxproj|C:\\Users\\jake1\\Desktop\\Maldev\\Mallet\\Mallet_GUI\\Common.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C3082FED-CC01-4D3D-9E81-06345F431CEF}|Mallet_GUI.vcxproj|solutionrelative:Common.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "generator.cpp",
+              "DocumentMoniker": "C:\\Users\\jake1\\Desktop\\Maldev\\Mallet\\Mallet_GUI\\generator.cpp",
+              "RelativeDocumentMoniker": "generator.cpp",
+              "ToolTip": "C:\\Users\\jake1\\Desktop\\Maldev\\Mallet\\Mallet_GUI\\generator.cpp",
+              "RelativeToolTip": "generator.cpp",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACAAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-22T23:19:12.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "encryption.cpp",
+              "DocumentMoniker": "C:\\Users\\jake1\\Desktop\\Maldev\\Mallet\\Mallet_GUI\\encryption.cpp",
+              "RelativeDocumentMoniker": "encryption.cpp",
+              "ToolTip": "C:\\Users\\jake1\\Desktop\\Maldev\\Mallet\\Mallet_GUI\\encryption.cpp",
+              "RelativeToolTip": "encryption.cpp",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAADIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-22T23:20:00.519Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,35 +62,22 @@
               "RelativeDocumentMoniker": "io.cpp",
               "ToolTip": "C:\\Users\\jake1\\Desktop\\Maldev\\Mallet\\Mallet_GUI\\io.cpp",
               "RelativeToolTip": "io.cpp",
-              "ViewState": "AQIAADUAAAAAAAAAAAAAAEQAAAAQAAAA",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAAAKoAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-22T22:08:43.741Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Common.h",
               "DocumentMoniker": "C:\\Users\\jake1\\Desktop\\Maldev\\Mallet\\Mallet_GUI\\Common.h",
               "RelativeDocumentMoniker": "Common.h",
               "ToolTip": "C:\\Users\\jake1\\Desktop\\Maldev\\Mallet\\Mallet_GUI\\Common.h",
               "RelativeToolTip": "Common.h",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACEAAAByAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAB8AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-22T21:59:50.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "util.cpp",
-              "DocumentMoniker": "C:\\Users\\jake1\\Desktop\\Maldev\\Mallet\\Mallet_GUI\\util.cpp",
-              "RelativeDocumentMoniker": "util.cpp",
-              "ToolTip": "C:\\Users\\jake1\\Desktop\\Maldev\\Mallet\\Mallet_GUI\\util.cpp",
-              "RelativeToolTip": "util.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-22T21:58:30.922Z",
               "EditorCaption": ""
             }
           ]

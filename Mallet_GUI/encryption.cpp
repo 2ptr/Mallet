@@ -42,3 +42,20 @@ BOOL AESEncrypt(OUT PBYTE pPayload, OUT SIZE_T sPayloadSize, OUT BYTE* pKey, OUT
 
 	return EXIT_SUCCESS;
 }
+
+BOOL XOREncrypt(OUT PBYTE pPayload, OUT SIZE_T sPayloadSize, OUT BYTE* pKey)
+{
+	// Update key
+	RandomBytes(pKey, 32);
+
+	for (size_t i = 0, j = 0; i < sPayloadSize; i++, j++) {
+		// if end of the key, start again 
+		if (j >= 32)
+		{
+			j = 0;
+		}
+		pPayload[i] = pPayload[i] ^ pKey[j];
+	}
+
+	return EXIT_SUCCESS;
+}

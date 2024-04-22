@@ -24,13 +24,14 @@ int Generate(IN PVOID pPayload, IN SIZE_T sPayloadSize, IN struct UserOptions sM
 		switch (sMenuOptions.cAlgorithm) {
 		case 1: //AES
 			AESEncrypt((PBYTE)pPaddedPayload, sPaddedPayloadSize, (BYTE*)pKey, (BYTE*)pIV);
-			LogAES((BYTE*)pKey, (BYTE*)pIV, j);
+			LogEncryption((BYTE*)pKey, (BYTE*)pIV, j);
 			break;
 		case 2: //RC4
 			printf("RC4!\n");
 			break;
 		case 3: //XOR
-			printf("XOR!\n");
+			XOREncrypt((PBYTE)pPaddedPayload, sPaddedPayloadSize, (BYTE*)pKey);
+			LogEncryption((BYTE*)pKey, (BYTE*)pIV, j);
 			break;
 		}
 	}
