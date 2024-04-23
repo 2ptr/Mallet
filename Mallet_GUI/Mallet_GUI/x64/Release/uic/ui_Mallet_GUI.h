@@ -249,7 +249,7 @@ public:
 
         label = new QLabel(Mallet_GUIClass);
         label->setObjectName("label");
-        label->setGeometry(QRect(60, 30, 191, 151));
+        label->setGeometry(QRect(50, 40, 191, 151));
         label->setPixmap(QPixmap(QString::fromUtf8("mallet_splash.png")));
         label->setScaledContents(true);
         quickModeButton = new QPushButton(Mallet_GUIClass);

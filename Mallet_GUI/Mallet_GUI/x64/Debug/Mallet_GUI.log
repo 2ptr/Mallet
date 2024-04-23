@@ -1,9 +1,0 @@
-﻿  mallet.cpp
-  util.cpp
-C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\util.cpp(33,8): warning C4477: 'scanf' : format string '%i' requires an argument of type 'int *', but variadic argument 1 has type 'int'
-C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\util.cpp(65,1441): warning C4838: conversion from 'int' to 'BYTE' requires a narrowing conversion
-C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\util.cpp(65,1447): warning C4838: conversion from 'int' to 'BYTE' requires a narrowing conversion
-C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\util.cpp(65,1453): warning C4838: conversion from 'int' to 'BYTE' requires a narrowing conversion
-C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\util.cpp(65,1459): warning C4838: conversion from 'int' to 'BYTE' requires a narrowing conversion
-C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\util.cpp(80,8): warning C4477: 'scanf' : format string '%i' requires an argument of type 'int *', but variadic argument 1 has type 'int'
-  Mallet_GUI.vcxproj -> C:\Users\jake1\Desktop\Maldev\Mallet_Master\Mallet_GUI\x64\Debug\Mallet_GUI.exe
