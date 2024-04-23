@@ -1,0 +1,2 @@
+
+const BYTE pProtected[] = { 
