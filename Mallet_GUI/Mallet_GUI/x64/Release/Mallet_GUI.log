@@ -1,4 +1,5 @@
-﻿  Mallet_GUI.cpp
+﻿  uic Mallet_GUI.ui
+  Mallet_GUI.cpp
   main.cpp
   moc_Mallet_GUI.cpp
   Mallet_GUI.vcxproj -> C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\x64\Release\Mallet_GUI.exe

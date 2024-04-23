@@ -40,23 +40,23 @@ public:
     QComboBox *deliveryCombo;
     QLabel *httpLabel;
     QLineEdit *httpLine;
+    QLabel *encLabel;
     QLabel *encLabel_2;
     QComboBox *encryptCombo;
     QLabel *roundsLabel;
     QSpinBox *roundsCount;
+    QLabel *formatLabel;
     QLabel *exportLabel_2;
     QComboBox *formatCombo;
     QLabel *exportLabel;
     QLineEdit *exportLine;
+    QLabel *executeLabel;
     QLabel *processLabel_2;
     QComboBox *executeCombo;
-    QLabel *processLabel;
-    QLineEdit *processLine;
     QLabel *callsLabel;
     QComboBox *callsCombo;
-    QLabel *executeLabel;
-    QLabel *formatLabel;
-    QLabel *encLabel;
+    QLabel *processLabel;
+    QLineEdit *processLine;
     QLabel *label;
     QPushButton *quickModeButton;
     QLabel *label_2;
@@ -66,19 +66,21 @@ public:
     {
         if (Mallet_GUIClass->objectName().isEmpty())
             Mallet_GUIClass->setObjectName("Mallet_GUIClass");
-        Mallet_GUIClass->resize(663, 500);
+        Mallet_GUIClass->resize(663, 475);
         QIcon icon;
         icon.addFile(QString::fromUtf8("mallet_icon.png"), QSize(), QIcon::Normal, QIcon::Off);
         Mallet_GUIClass->setWindowIcon(icon);
         tabWidget = new QTabWidget(Mallet_GUIClass);
         tabWidget->setObjectName("tabWidget");
-        tabWidget->setGeometry(QRect(20, 260, 251, 121));
+        tabWidget->setGeometry(QRect(20, 250, 251, 201));
+        tabWidget->setAutoFillBackground(false);
         CustomShellcode = new QWidget();
         CustomShellcode->setObjectName("CustomShellcode");
         formLayout = new QFormLayout(CustomShellcode);
         formLayout->setSpacing(6);
         formLayout->setContentsMargins(11, 11, 11, 11);
         formLayout->setObjectName("formLayout");
+        formLayout->setFormAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter);
         fileLine = new QLineEdit(CustomShellcode);
         fileLine->setObjectName("fileLine");
 
@@ -92,17 +94,23 @@ public:
         tabWidget->addTab(CustomShellcode, QString());
         runButton = new QPushButton(Mallet_GUIClass);
         runButton->setObjectName("runButton");
-        runButton->setGeometry(QRect(80, 440, 131, 31));
+        runButton->setGeometry(QRect(500, 430, 131, 31));
         optionsBox = new QGroupBox(Mallet_GUIClass);
         optionsBox->setObjectName("optionsBox");
-        optionsBox->setGeometry(QRect(290, 20, 361, 461));
+        optionsBox->setGeometry(QRect(290, 20, 361, 391));
         QFont font;
         font.setBold(false);
         optionsBox->setFont(font);
+        optionsBox->setFlat(false);
+        optionsBox->setCheckable(false);
         formLayout_2 = new QFormLayout(optionsBox);
         formLayout_2->setSpacing(6);
         formLayout_2->setContentsMargins(11, 11, 11, 11);
         formLayout_2->setObjectName("formLayout_2");
+        formLayout_2->setFieldGrowthPolicy(QFormLayout::FieldGrowthPolicy::AllNonFixedFieldsGrow);
+        formLayout_2->setRowWrapPolicy(QFormLayout::RowWrapPolicy::DontWrapRows);
+        formLayout_2->setLabelAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter);
+        formLayout_2->setFormAlignment(Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter);
         deliveryLabel = new QLabel(optionsBox);
         deliveryLabel->setObjectName("deliveryLabel");
         QFont font1;
@@ -139,6 +147,12 @@ public:
 
         formLayout_2->setWidget(2, QFormLayout::FieldRole, httpLine);
 
+        encLabel = new QLabel(optionsBox);
+        encLabel->setObjectName("encLabel");
+        encLabel->setFont(font1);
+
+        formLayout_2->setWidget(4, QFormLayout::LabelRole, encLabel);
+
         encLabel_2 = new QLabel(optionsBox);
         encLabel_2->setObjectName("encLabel_2");
 
@@ -162,6 +176,12 @@ public:
         roundsCount->setObjectName("roundsCount");
 
         formLayout_2->setWidget(6, QFormLayout::FieldRole, roundsCount);
+
+        formatLabel = new QLabel(optionsBox);
+        formatLabel->setObjectName("formatLabel");
+        formatLabel->setFont(font1);
+
+        formLayout_2->setWidget(8, QFormLayout::LabelRole, formatLabel);
 
         exportLabel_2 = new QLabel(optionsBox);
         exportLabel_2->setObjectName("exportLabel_2");
@@ -187,6 +207,12 @@ public:
 
         formLayout_2->setWidget(10, QFormLayout::FieldRole, exportLine);
 
+        executeLabel = new QLabel(optionsBox);
+        executeLabel->setObjectName("executeLabel");
+        executeLabel->setFont(font1);
+
+        formLayout_2->setWidget(12, QFormLayout::LabelRole, executeLabel);
+
         processLabel_2 = new QLabel(optionsBox);
         processLabel_2->setObjectName("processLabel_2");
 
@@ -203,18 +229,6 @@ public:
 
         formLayout_2->setWidget(13, QFormLayout::FieldRole, executeCombo);
 
-        processLabel = new QLabel(optionsBox);
-        processLabel->setObjectName("processLabel");
-        processLabel->setEnabled(false);
-
-        formLayout_2->setWidget(15, QFormLayout::LabelRole, processLabel);
-
-        processLine = new QLineEdit(optionsBox);
-        processLine->setObjectName("processLine");
-        processLine->setEnabled(false);
-
-        formLayout_2->setWidget(15, QFormLayout::FieldRole, processLine);
-
         callsLabel = new QLabel(optionsBox);
         callsLabel->setObjectName("callsLabel");
 
@@ -229,23 +243,17 @@ public:
 
         formLayout_2->setWidget(14, QFormLayout::FieldRole, callsCombo);
 
-        executeLabel = new QLabel(optionsBox);
-        executeLabel->setObjectName("executeLabel");
-        executeLabel->setFont(font1);
+        processLabel = new QLabel(optionsBox);
+        processLabel->setObjectName("processLabel");
+        processLabel->setEnabled(false);
 
-        formLayout_2->setWidget(12, QFormLayout::LabelRole, executeLabel);
+        formLayout_2->setWidget(15, QFormLayout::LabelRole, processLabel);
 
-        formatLabel = new QLabel(optionsBox);
-        formatLabel->setObjectName("formatLabel");
-        formatLabel->setFont(font1);
+        processLine = new QLineEdit(optionsBox);
+        processLine->setObjectName("processLine");
+        processLine->setEnabled(false);
 
-        formLayout_2->setWidget(8, QFormLayout::LabelRole, formatLabel);
-
-        encLabel = new QLabel(optionsBox);
-        encLabel->setObjectName("encLabel");
-        encLabel->setFont(font1);
-
-        formLayout_2->setWidget(4, QFormLayout::LabelRole, encLabel);
+        formLayout_2->setWidget(15, QFormLayout::FieldRole, processLine);
 
         label = new QLabel(Mallet_GUIClass);
         label->setObjectName("label");
@@ -254,13 +262,13 @@ public:
         label->setScaledContents(true);
         quickModeButton = new QPushButton(Mallet_GUIClass);
         quickModeButton->setObjectName("quickModeButton");
-        quickModeButton->setGeometry(QRect(80, 400, 131, 31));
+        quickModeButton->setGeometry(QRect(320, 430, 131, 31));
         label_2 = new QLabel(Mallet_GUIClass);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(130, 200, 49, 16));
+        label_2->setGeometry(QRect(130, 190, 49, 16));
         label_3 = new QLabel(Mallet_GUIClass);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(90, 220, 121, 16));
+        label_3->setGeometry(QRect(90, 210, 121, 16));
 
         retranslateUi(Mallet_GUIClass);
 
@@ -289,12 +297,14 @@ public:
         httpLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "HTTP Stager URL", nullptr));
         httpLine->setText(QString());
         httpLine->setPlaceholderText(QCoreApplication::translate("Mallet_GUIClass", "http://attacker.com/payload.raw", nullptr));
+        encLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "Encryption", nullptr));
         encLabel_2->setText(QCoreApplication::translate("Mallet_GUIClass", "Algorithm", nullptr));
         encryptCombo->setItemText(0, QCoreApplication::translate("Mallet_GUIClass", "AES-256 (TinyAES)", nullptr));
         encryptCombo->setItemText(1, QCoreApplication::translate("Mallet_GUIClass", "RC4 (COMING SOON)", nullptr));
         encryptCombo->setItemText(2, QCoreApplication::translate("Mallet_GUIClass", "XOR", nullptr));
 
         roundsLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "Rounds", nullptr));
+        formatLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "Format", nullptr));
         exportLabel_2->setText(QCoreApplication::translate("Mallet_GUIClass", "File Format", nullptr));
         formatCombo->setItemText(0, QCoreApplication::translate("Mallet_GUIClass", ".exe", nullptr));
         formatCombo->setItemText(1, QCoreApplication::translate("Mallet_GUIClass", ".dll (COMING SOON)", nullptr));
@@ -302,24 +312,22 @@ public:
         exportLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "Export name for .dll", nullptr));
         exportLine->setText(QString());
         exportLine->setPlaceholderText(QCoreApplication::translate("Mallet_GUIClass", "EvilFunction", nullptr));
+        executeLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "Execution", nullptr));
         processLabel_2->setText(QCoreApplication::translate("Mallet_GUIClass", "Method", nullptr));
         executeCombo->setItemText(0, QCoreApplication::translate("Mallet_GUIClass", "Local Thread", nullptr));
         executeCombo->setItemText(1, QCoreApplication::translate("Mallet_GUIClass", "Remote Process Injection", nullptr));
 
-        processLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "Target Process", nullptr));
-        processLine->setText(QString());
-        processLine->setPlaceholderText(QCoreApplication::translate("Mallet_GUIClass", "notepad.exe", nullptr));
         callsLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "System Calls", nullptr));
         callsCombo->setItemText(0, QCoreApplication::translate("Mallet_GUIClass", "Win32 API", nullptr));
         callsCombo->setItemText(1, QCoreApplication::translate("Mallet_GUIClass", "NT API (COMING SOON)", nullptr));
         callsCombo->setItemText(2, QCoreApplication::translate("Mallet_GUIClass", "Syscalls (COMING SOON)", nullptr));
 
-        executeLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "Execution", nullptr));
-        formatLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "Format", nullptr));
-        encLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "Encryption", nullptr));
+        processLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "Target Process", nullptr));
+        processLine->setText(QString());
+        processLine->setPlaceholderText(QCoreApplication::translate("Mallet_GUIClass", "notepad.exe", nullptr));
         label->setText(QString());
         quickModeButton->setText(QCoreApplication::translate("Mallet_GUIClass", "Quick Mode", nullptr));
-        label_2->setText(QCoreApplication::translate("Mallet_GUIClass", "v 0.2", nullptr));
+        label_2->setText(QCoreApplication::translate("Mallet_GUIClass", "v 0.3", nullptr));
         label_3->setText(QCoreApplication::translate("Mallet_GUIClass", "Written by twopoint", nullptr));
     } // retranslateUi
 
