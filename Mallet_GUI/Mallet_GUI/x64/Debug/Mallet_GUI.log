@@ -1,0 +1,31 @@
+﻿  aes.c
+  compile.cpp
+  encryption.cpp
+  generator.cpp
+  headers.cpp
+  util.cpp
+  io.cpp
+  mallet.cpp
+  Mallet_GUI.cpp
+  main.cpp
+C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\io.cpp(134,20): warning C4477: 'fprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'std::string'
+C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\headers.cpp(23,20): warning C4477: 'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'SIZE_T'
+  C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\headers.cpp(23,20):
+  consider using '%lld' in the format string
+  C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\headers.cpp(23,20):
+  consider using '%Id' in the format string
+  C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\headers.cpp(23,20):
+  consider using '%I64d' in the format string
+  
+C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\headers.cpp(43,20): warning C4477: 'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'SIZE_T'
+  C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\headers.cpp(43,20):
+  consider using '%lld' in the format string
+  C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\headers.cpp(43,20):
+  consider using '%Id' in the format string
+  C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\headers.cpp(43,20):
+  consider using '%I64d' in the format string
+  
+  qrc_Mallet_GUI.cpp
+  moc_Mallet_GUI.cpp
+  LINK : C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\x64\Debug\Mallet_GUI.exe not found or not built by the last incremental link; performing full link
+  Mallet_GUI.vcxproj -> C:\Users\jake1\Desktop\Maldev\Mallet\Mallet_GUI\x64\Debug\Mallet_GUI.exe

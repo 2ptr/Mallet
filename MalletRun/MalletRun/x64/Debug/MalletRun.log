@@ -1,2 +1,7 @@
 ﻿  runner.c
+C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\runner.c(11,59): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\runner.c(11,59): warning C4024: 'CreateToolhelp32Snapshot': different types for formal and actual parameter 2
+C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\runner.c(19,34): warning C4133: 'function': incompatible types - from 'LPWSTR' to 'const char *'
+C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\runner.c(96,8): warning C4133: 'initializing': incompatible types - from 'char [13]' to 'LPWSTR'
+C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\runner.c(97,7): warning C4047: 'initializing': 'DWORD' differs in levels of indirection from 'void *'
   MalletRun.vcxproj -> C:\Users\jake1\Desktop\Maldev\Mallet\MalletRun\x64\Debug\MalletRun.exe

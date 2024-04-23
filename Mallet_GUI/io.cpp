@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <iostream>
-#include <fstream>
-#include <string>
 #include "Common.h"
 using namespace std;
 
@@ -94,13 +90,7 @@ BOOL WriteRunner(IN PVOID pPayload, IN SIZE_T sPayloadSize, IN struct UserOption
 	}
 
 	// Write file header. Depends on delivery method. Remote injections need helper function headers
-	if (sMenuOptions.cExecute == 1)
-	{
-		WriteHeader((PBYTE)pPayload, sPayloadSize, fRunner, sMenuOptions);
-	}
-	else {
-		WriteHeader((PBYTE)pPayload, sPayloadSize, fRunner, sMenuOptions);
-	}
+	WriteHeader((PBYTE)pPayload, sPayloadSize, fRunner, sMenuOptions);
 
 	// Write decryption. Based on algo and round count
 	WriteDecryption(fRunner, fKeychain, sMenuOptions);
@@ -141,6 +131,7 @@ BOOL WriteWin32Execution(IN FILE* fRunner, IN struct UserOptions sMenuOptions)
 		// Remote process injection
 	case 2: 
 	{
+		fprintf(fRunner, "LPWSTR sProcessName = \"%s\";\n", sMenuOptions.sProcess);
 		Copyfile("..\\..\\..\\Assets\\Execution\\Win32\\remoteProcess.c", fRunner);
 		break;
 	}

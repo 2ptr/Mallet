@@ -304,7 +304,7 @@ public:
         exportLine->setPlaceholderText(QCoreApplication::translate("Mallet_GUIClass", "EvilFunction", nullptr));
         processLabel_2->setText(QCoreApplication::translate("Mallet_GUIClass", "Method", nullptr));
         executeCombo->setItemText(0, QCoreApplication::translate("Mallet_GUIClass", "Local Thread", nullptr));
-        executeCombo->setItemText(1, QCoreApplication::translate("Mallet_GUIClass", "Remote Process Injection (COMING SOON)", nullptr));
+        executeCombo->setItemText(1, QCoreApplication::translate("Mallet_GUIClass", "Remote Process Injection", nullptr));
 
         processLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "Target Process", nullptr));
         processLine->setText(QString());

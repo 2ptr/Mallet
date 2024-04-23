@@ -262,7 +262,7 @@
       </item>
       <item>
        <property name="text">
-        <string>Remote Process Injection (COMING SOON)</string>
+        <string>Remote Process Injection</string>
        </property>
       </item>
      </widget>
