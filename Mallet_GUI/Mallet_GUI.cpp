@@ -70,6 +70,17 @@ void Mallet_GUI::on_executeCombo_currentIndexChanged()
         ui.processLabel->setEnabled(true);
         ui.processLine->setEnabled(true);
     }
+
+    if (ui.executeCombo->currentIndex() == 1)
+    {
+        ui.processLabel->setText("Full image path");
+        ui.processLine->setPlaceholderText("C:\\Windows\\System32\\notepad.exe");
+    }
+    else {
+        ui.processLabel->setText("Target Process");
+        ui.processLine->setPlaceholderText("notepad.exe");
+    }
+
 }
 
 void Mallet_GUI::on_runButton_clicked()
@@ -87,6 +98,20 @@ void Mallet_GUI::on_runButton_clicked()
     sMenuOptions.cExecute = (ui.executeCombo->currentIndex() + 1);
     sMenuOptions.cCalls = (ui.callsCombo->currentIndex() + 1);
     sMenuOptions.sProcess = (ui.processLine->text()).toStdString();
+     
+    // Escape processing for image paths
+    string sEscaped;
+    for (char c : sMenuOptions.sProcess) {
+        if (c == '\\') {
+            // If the character is a backslash, add an extra one
+            sEscaped += "\\\\";
+        }
+        else {
+            // Otherwise, just append the character as is
+            sEscaped += c;
+        }
+    }
+    sMenuOptions.sProcess = sEscaped;
 
     Mallet(sMenuOptions);
 

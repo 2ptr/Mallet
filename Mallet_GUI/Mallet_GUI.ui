@@ -322,6 +322,11 @@
       </item>
       <item>
        <property name="text">
+        <string>CreateProcess Injection</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
         <string>Remote Process Injection</string>
        </property>
       </item>

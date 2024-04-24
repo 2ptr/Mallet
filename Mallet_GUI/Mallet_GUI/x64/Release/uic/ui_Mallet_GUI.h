@@ -221,6 +221,7 @@ public:
         executeCombo = new QComboBox(optionsBox);
         executeCombo->addItem(QString());
         executeCombo->addItem(QString());
+        executeCombo->addItem(QString());
         executeCombo->setObjectName("executeCombo");
         QFont font2;
         font2.setBold(false);
@@ -315,7 +316,8 @@ public:
         executeLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "Execution", nullptr));
         processLabel_2->setText(QCoreApplication::translate("Mallet_GUIClass", "Method", nullptr));
         executeCombo->setItemText(0, QCoreApplication::translate("Mallet_GUIClass", "Local Thread", nullptr));
-        executeCombo->setItemText(1, QCoreApplication::translate("Mallet_GUIClass", "Remote Process Injection", nullptr));
+        executeCombo->setItemText(1, QCoreApplication::translate("Mallet_GUIClass", "CreateProcess Injection", nullptr));
+        executeCombo->setItemText(2, QCoreApplication::translate("Mallet_GUIClass", "Remote Process Injection", nullptr));
 
         callsLabel->setText(QCoreApplication::translate("Mallet_GUIClass", "System Calls", nullptr));
         callsCombo->setItemText(0, QCoreApplication::translate("Mallet_GUIClass", "Win32 API", nullptr));

