@@ -1,9 +1,7 @@
 <img src="./Assets/img/mallet.png" width="300" height="300" />
 
 # Mallet
-Mallet is a tool to quickly generate shellcode droppers that will evade basic AV solutions like Windows Defender.
-
-MALLET IS A WIP. MANY FEATURES ARE NOT YET IMPLEMENTED.
+Modular malware generation framework. Intended to produce functional albeit simple shellcode droppers while being easily accessible and educational.
 
 ## Usage
 Clone the repo and start `Mallet.bat`. Use the menu to select your settings and generate a payload. The output dropper and keychain will be stored in the Output folder.
