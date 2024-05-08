@@ -3,6 +3,8 @@
 # Mallet
 Modular malware generation framework. Intended to produce functional albeit simple shellcode droppers while being easily accessible and educational.
 
+**Mallet is unlikely to receive further significant updates** - see ![Shroud](https://github.com/Jake123otte1/Shroud) instead.
+
 ## Usage
 Clone the repo and start `Mallet.bat`. Use the menu to select your settings and generate a payload. The output dropper and keychain will be stored in the Output folder.
 
